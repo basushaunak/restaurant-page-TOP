@@ -1,0 +1,216 @@
+
+@font-face {
+	font-family: Style Script;
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	src: local("Style Script Regular"), local("StyleScript-Regular"), url(../assets/fonts/style-script.woff2) format("woff2"), url(../assets/fonts/style-script.woff) format("woff");
+	font-display: auto;
+}
+
+@font-face {
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 100 900;
+	font-stretch: 100%;
+	src: local("Inter Regular"), local("Inter-Regular"), url(../assets/fonts/inter.woff2) format("woff2"), url(../assets/fonts/inter.woff) format("woff");
+	font-display: auto;
+}
+
+
+*,*::before, *::after{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --var-pink-100: hsl(350, 100%, 90%);
+    --var-pink-200: hsl(347, 100%, 80%);
+    --var-pink-300: hsl(349, 38%, 70%);
+    --var-pink-400: hsl(349, 33%, 60%);
+    --var-pink-500: hsl(349, 33%, 50%);
+    --var-pink-600: hsl(349, 33%, 40%);
+    --foreground-color-100: hsl(347, 36%, 35%);
+    --foreground-color-200: hsl(347, 36%, 20%);
+
+    --heading-font: "Style Script",sans-serif;
+    --paragraph-font: "Inter",sans-serif;
+}
+
+html{
+    background-color: pink;
+    font: var(--paragraph-font);
+    color: var(--foreground-color-100);
+}
+
+h1,h2{
+    font: var(--heading-font);
+    font-weight: 800;
+    color: var(--foreground-color-200);
+    text-align: center;
+    line-height: 1.2em;
+    padding-block: 0.5rem;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+p{
+    padding-inline: 2em;
+    line-height: 1.5em;
+    padding-block: 1em;
+}
+#brand-name{
+    color: red;
+    font-size: 3rem;
+}
+
+.wrapper{
+    width: 80%;
+    margin-inline: auto;
+    margin-block: 2rem;
+    background-color: var(--var-pink-200);
+    padding: 0.5rem;
+    border-radius: 20px;
+}
+
+#primary-nav{
+    width: 35%;
+    margin-inline: auto;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px black solid;
+}
+
+#primary-nav > button{
+    font: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    width: 100%;
+    background: var(--var-pink-100);
+    background: radial-gradient(circle, var(--var-pink-100) 0%, var(--var-pink-200) 50%, var(--var-pink-300) 100%);
+    color: var(--foreground-color-200);
+    border-radius: 10px;
+}
+
+#primary-nav > button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#primary-nav > button:disabled{
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+#hero-img-div{
+    width: 95%;
+    height: 300px;
+    margin-inline: auto;
+    margin-block: 1rem;
+}
+
+.first-char{
+    font-size: 3rem;
+}
+
+#hero-img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    height: 100%;
+    overflow: clip;
+}
+
+.card{
+    border: 4px black solid;
+    border-radius: 20px;
+    width: 400px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    background-color: var(--var-pink-100);
+    
+}
+
+.card p{
+    padding-block: 0.5em;
+}
+
+.avatar-image, .item-image{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0.5rem;
+    border-radius: 20px;
+}
+
+.item-image{
+    width:auto;
+    height: 100%;
+    object-fit: cover;
+    margin: 0.5rem;
+    border-radius: 20px;
+}
+#owner-card{
+    left: 200px;
+    top: 80px;
+    transform: rotate(-15deg);
+}
+
+#manager-card{
+    top: -100px;
+    left: 50%;
+    transform: rotate(15deg);
+}
+
+#floor-incharge-card{
+    left: 200px;
+    transform: rotate(10deg);
+}
+
+#ceo-card{
+    top: -200px;
+    left: 50%;
+    transform: rotate(-10deg);
+}
+
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: 300px;
+    grid-auto-rows: 300px;
+    gap: 1rem;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+}
+
+
+.menu-heading{
+    background: -webkit-linear-gradient(hsl(0, 100%, 50%), hsl(39, 100%, 35%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-block: 1rem;
+    border: 1px black solid;
+    width: fit-content;
+    margin-inline: auto;
+    padding: 0.5em;
+}
+
+.item-title{
+    font-size: 1.2rem;
+    line-height: 1.1em;
+    font-weight: 800;
+}
